@@ -107,34 +107,6 @@
         }
       }
     },
-    "main-app-e2e": {
-      "root": "projects/main-app-e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/main-app-e2e/protractor.conf.js",
-            "devServerTarget": "main-app:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "main-app:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/main-app-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "custom-element-a": {
       "root": "projects/custom-element-a/",
       "sourceRoot": "projects/custom-element-a/src",
@@ -173,7 +145,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
@@ -232,34 +204,6 @@
               "projects/custom-element-a/tsconfig.app.json",
               "projects/custom-element-a/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "custom-element-a-e2e": {
-      "root": "projects/custom-element-a-e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/custom-element-a-e2e/protractor.conf.js",
-            "devServerTarget": "custom-element-a:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "custom-element-a:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/custom-element-a-e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]

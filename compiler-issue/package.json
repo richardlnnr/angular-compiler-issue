@@ -2,12 +2,12 @@
   "name": "compiler-issue",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "./node_modules/.bin/ng",
+    "start": "./node_modules/.bin/ng serve main-app --host 0.0.0.0 --proxy-config proxy.config.js",
+    "start:prod": "./node_modules/.bin/ng serve main-app --host 0.0.0.0 --proxy-config proxy.config.js --prod",
+    "build:custom-element-a": "./node_modules/.bin/ng build custom-element-a --prod",
+    "pack:custom-element-a": "node projects/custom-element-a/copy-bundles",
+    "package:custom-element-a": "npm run build:custom-element-a && npm run pack:custom-element-a"
   },
   "private": true,
   "dependencies": {
@@ -29,10 +29,12 @@
     "@angular/cli": "~7.3.7",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "concat-files": "^0.1.1",
+    "fs-extra": "^7.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
