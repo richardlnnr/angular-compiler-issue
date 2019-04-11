@@ -3,10 +3,12 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NormalStrategyComponent } from './normal-strategy/normal-strategy.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NormalStrategyComponent
   ],
   imports: [
     BrowserModule,
