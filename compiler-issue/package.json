@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "./node_modules/.bin/ng",
     "start": "./node_modules/.bin/ng serve main-app --host 0.0.0.0 --proxy-config proxy.config.js",
-    "start:prod": "./node_modules/.bin/ng serve main-app --host 0.0.0.0 --proxy-config proxy.config.js --prod",
+    "start-prod": "./node_modules/.bin/ng serve main-app --host 0.0.0.0 --proxy-config proxy.config.js --prod",
     "build:custom-element-a": "./node_modules/.bin/ng build custom-element-a --prod",
+    "build-prod:custom-element-a": "./node_modules/.bin/ng build custom-element-a --prod --optimization=false",
     "pack:custom-element-a": "node projects/custom-element-a/copy-bundles",
-    "package:custom-element-a": "npm run build:custom-element-a && npm run pack:custom-element-a"
+    "package:custom-element-a": "npm run build:custom-element-a && npm run pack:custom-element-a",
+    "package-prod:custom-element-a": "npm run build-prod:custom-element-a && npm run pack:custom-element-a"
   },
   "private": true,
   "dependencies": {
