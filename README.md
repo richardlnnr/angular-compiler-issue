@@ -6,12 +6,13 @@ For building this project it's necessary running the following steps:
 
 Prepare the static server
 
-* `cd ../static`
+* `cd static`
 * `npm install`
 * `npm start`
 
 Prepare application
 
+* `cd compiler-issue`
 * `npm install`
 * `npm run package:custom-element-a`
 * `npm run start-prod`
