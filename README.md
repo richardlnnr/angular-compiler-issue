@@ -35,10 +35,12 @@ When you build the `custom-element-a` with `--optimization=false` the `main-app`
 
 When you build the `custom-element-a` with `--optimization=true` the `main-app` doesn't work in production mode, but works in dev-mode. (`npm run package:custom-element-a`)
 
-## Problem 2/2 - The Custom element doesn't render
+## Problem 2/2 - The Custom element doesn't render (route withut lazy load)
 
 When the application `main-app` is built using production mode, and the application `custom-element-a` is built using production mode (optimization=true).
 When accessing the route `/normal-strategy` the custom-element doesn't renderer.
+
+In the custom-element-a component, the lifecycle OnInit execute a console.log message, but in this case, the message isn't printed.
 
 When you build the `custom-element-a` with `--optimization=false` the `main-app` works in production mode, but doesn't work in dev-mode. (`npm run package-prod:custom-element-a`)
 
