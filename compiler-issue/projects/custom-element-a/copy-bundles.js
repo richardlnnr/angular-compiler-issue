@@ -17,7 +17,7 @@ concat(
     `${distPath}/main.js`,
     `${distPath}/runtime.js`,
     `${distPath}/scripts.js`,
-    `${distPath}/es2015-polyfills.js`,
+    `${distPath}/polyfills.es5.js`,
     `${distPath}/polyfills.js`
   ], 
   bundleJs, function(err) {
